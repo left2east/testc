@@ -27,11 +27,14 @@ int f(int *x, int *y)
 
 int main()
 {
-    Node head;
-    head.data = 1;
-    Node p = head;
-    p.data = 2;
+    Node *head;
+    head->data = 1;
+    Node *p = head;
+    p->data = 2;
     p = p->next;
-    p.data =3;
+    p->data =3;
+    p->next = NULL;
+    printf("%d", head->data);
+    printf("%d", head->next->data);
     
 }
